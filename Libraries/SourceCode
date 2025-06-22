@@ -1,0 +1,73 @@
+boolean   fire=false;  
+const   int   lsensor=8;  
+const   int   stsensor=9;  
+const   int   rsensor=10;  
+const   int   m1pos=2;  
+const   int   m1neg=3;  
+const   int   m2pos=4;  
+const   int   m2neg=5;  
+const   int   pump=6;  
+void   offfire()  
+{  
+delay(500);  
+digitalWrite(m1pos,LOW);  
+digitalWrite(m1neg,LOW);  
+digitalWrite(m2pos,LOW);  
+digitalWrite(m2neg,LOW);  
+digitalWrite(pump,HIGH);  
+delay(3000);  
+digitalWrite(pump,LOW);  
+fire=false;  
+}  
+void   setup()   {  
+//   put,I   your   setup   code   here,   to   run   once:  
+pinMode(lsensor,INPUT);  
+pinMode(stsensor,INPUT);  
+pinMode(rsensor,INPUT);  
+pinMode(m1pos,OUTPUT);  
+pinMode(m1neg,OUTPUT);  
+pinMode(m2pos,OUTPUT);  
+pinMode(m2neg,OUTPUT);  
+Serial.begin(9600);  
+}  
+void   loop()   {  
+//   put   your   main   code   here,   to   run   repeatedly:  
+if(digitalRead(lsensor)==1&&digitalRead(rsensor)==1&&digitalRead(stsensor)==1 
+)  
+{  
+Serial.println("NO   FLAME");  
+digitalWrite(m1pos,LOW);  
+digitalWrite(m1neg,LOW);  
+digitalWrite(m2pos,LOW);  
+digitalWrite(m2neg,LOW);  
+}  
+else   if(digitalRead(lsensor)==0)  
+{  
+Serial.println("left   FLAME");  
+digitalWrite(m1pos,HIGH);  
+digitalWrite(m1neg,LOW);  
+digitalWrite(m2pos,LOW);  
+digitalWrite(m2neg,LOW);  
+fire=true;  
+}  
+else   if(digitalRead(rsensor)==0)  
+{  
+Serial.println("right   FLAME");  
+digitalWrite(m1pos,LOW);  
+digitalWrite(m1neg,LOW);  
+digitalWrite(m2pos,HIGH);  
+digitalWrite(m2neg,LOW);  
+fire=true;  
+}  
+else   if(digitalRead(stsensor)==0)  
+{  
+Serial.println("STRAIGHT   FLAME");  
+digitalWrite(m1pos,HIGH);  
+digitalWrite(m1neg,LOW);  
+digitalWrite(m2pos,HIGH);  
+digitalWrite(m2neg,LOW);  
+fire=true;  
+}  
+while(fire==true)  
+offfire();  
+} 

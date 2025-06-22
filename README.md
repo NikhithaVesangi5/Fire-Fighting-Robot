@@ -1,7 +1,6 @@
 
 # Fire Fighting Robot
 
-# [WorkingPrototype]
 ![Image](https://github.com/user-attachments/assets/e8832487-63d2-47f3-9ccb-78be2cf91071)
 
 

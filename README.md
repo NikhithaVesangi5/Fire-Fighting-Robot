@@ -1,10 +1,10 @@
 
 # Fire Fighting Robot
 
-  ![image](https://github.com/Sreecharan9/SQL-Challenges/assets/118627524/7df5d89b-8e96-432f-aad6-6a0c540164c5)
-  
+# [WorkingPrototype]
+![Image](https://github.com/user-attachments/assets/e8832487-63d2-47f3-9ccb-78be2cf91071)
 
-# [WorkingPrototype](https://github.com/user-attachments/assets/6f82f227-0e0d-4fcc-b1a4-1ccef71ccd0a)
+
 rview:
 This case study uses PostgreSQL. To successfully answer all the questions one should have exposure to the following areas of SQL:
 

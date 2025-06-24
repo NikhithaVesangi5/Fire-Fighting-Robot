@@ -4,7 +4,7 @@
 ![Image](https://github.com/user-attachments/assets/e8832487-63d2-47f3-9ccb-78be2cf91071)
 
 
-rview:
+Overview:
 This case study uses PostgreSQL. To successfully answer all the questions one should have exposure to the following areas of SQL:
 
 * Our robot is to enter a “place” and seek out a spot where there is extreme heat possibly due to a fire.
